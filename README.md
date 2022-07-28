@@ -28,4 +28,4 @@ to removing this image after stop running add --rm to command
 ```bash
 docker run --rm --name container_name -p 5000:5000 image_name
 ```
-**if not work download yolov4.weights from [![HERE]([https://img.shields.io/apm/l/atomic-design-ui.svg?](https://img.shields.io/steam/downloads/1521424?color=green&label=HERE&style=for-the-badge))](https://github.com/rasoulasadiyan/color-recognition/raw/master/dnn_model/yolov4.weights) and replace with previous file in dnn_model directoty ** 
+**if not work download yolov4.weights from [HERE](https://img.shields.io/steam/downloads/1521424?color=green&label=HERE&style=for-the-badge))](https://github.com/rasoulasadiyan/color-recognition/raw/master/dnn_model/yolov4.weights) and replace with previous file in dnn_model directoty ** 
