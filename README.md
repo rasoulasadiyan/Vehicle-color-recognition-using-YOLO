@@ -29,3 +29,4 @@ you can remove this image after stopping add --rm to command
 ```bash
 docker run --rm --name container_name -p 5000:5000 image_name
 ```
+◘**if not work download yolov4.weights from [HERE](https://github.com/rasoulasadiyan/color-recognition/raw/master/dnn_model/yolov4.weights) and paste to dnn_model instead previous file** 
