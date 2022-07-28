@@ -13,7 +13,7 @@ RUN pip install -r requirements.txt
 
 COPY . /project
 
-ENV FLASK_APP=app3.py
+ENV FLASK_APP=app.py
 
 CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
-# CMD [ "python", "app3.py"]
+# CMD [ "python", "app.py"]
