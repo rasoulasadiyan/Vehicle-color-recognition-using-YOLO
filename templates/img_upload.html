@@ -1,0 +1,306 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <title>Upload Image</title> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <title>Color of car detection</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
+    <!-- Material Design Bootstrap -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet"> -->
+    
+
+    <style>
+
+        body{
+            background-color:rgb(246, 243, 234) ;
+        
+            height: 100%;
+        }
+
+        .upload_file{
+            height: 80px;
+            /* height: 150px; */
+            width: 200px;
+            border-radius: 15px;
+            border: 4px solid rgb(24, 225, 208);
+            text-align: left;
+            display: flex;
+            justify-content: center;
+            
+            align-items: center;
+
+            overflow: hidden;
+            position: absolute;
+            
+            background-image: linear-gradient(to bottom, #43da2c 50%,  rgb(248, 248, 242) 50%);
+            transition: all 2s;
+            background-size: 100% 200%;
+            color: white;
+
+            font-size: 100px;
+            margin-left: 550px;
+            margin-top: 450px;
+        }
+        .upload_file:hover{
+            background-position: 0 -100%;
+            color: chartreuse;
+        }
+
+        .wrapper{
+            width: 5%; 
+            height: 100%; 
+            
+        }
+
+        .display_image{
+            
+            margin-left: 300px;
+            /* display:grid; */
+            align-items: center;
+            justify-content: center; 
+        }
+
+        .sub{
+            padding: 15px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 400;
+            border-radius: 1rem;
+            margin-inline-start: 20px;
+            transition: 0.5s;
+            margin: 10px;
+            width: 250px;
+            margin-left:500px;
+            margin-bottom: 50px;
+            margin-top:65px;
+            
+            
+        }
+        .sub3{
+            padding: 15px;
+            font-size: large;
+
+            border-radius: 1rem;
+            margin-inline-start: 20px;
+            transition: 0.5s;
+            margin-top: -250px;
+            width: 250px;
+            margin-left:1000px;
+            background-color: burlywood;
+            
+        }
+        .sub:hover{
+            
+            /* transform: scale(1.5); */
+            color:rgb(255, 255, 255);
+            
+            background-color:rgb(0, 0, 0);
+            position: relative;
+        }
+
+        .sub2{
+            width: 100px;
+            height: 60px;
+            border-radius: 1rem;
+            margin-inline-start: 20px;
+            margin: 10px;
+            margin-left: 200px;
+            font-size: large; 
+            background-color: chartreuse;
+        }
+        input[type='file']{
+            position: absolute;
+            height: 250px;
+            width: 200px;
+            cursor: pointer;
+    
+        }
+
+        #text1{
+            margin-top: -40px;
+            margin-left:57%;
+            color:rgb(255, 106, 0);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #text2{
+            margin-top: 5px;
+            margin-left:45%;
+            color:rgb(14, 110, 235);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #text3{
+            /* margin-top: 5px; */
+            margin-left:45%;
+            color:rgb(254, 255, 255);
+            font-size: larger;
+            
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: antiquewhite;
+        }
+
+        .img{
+            width: 500px;
+            height: 300px;
+            margin-top: 100px;
+            margin-left: 250px;
+        }
+        .site-header{
+            background-color: black;
+            height: 50px;
+            color: dodgerblue;
+            font-size: larger;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .up_img{
+            height: 550px;
+            border-radius: 1rem;
+            border-color: aquamarine;
+            border-width: 5px;
+            margin-left: 100px;
+            margin-top: 80px;
+        }
+
+
+        .h4{
+            color: dodgerblue;
+            font-size: larger;  
+        }
+
+        .text_header{
+            width: 100%;
+            height: 70px;
+            background-color:darkslategray;
+            margin-top:5px;
+            align-items: center;
+
+
+            font-size: larger;
+        }
+
+        .display_text{
+            width: 50%;
+            height: 50px;
+            background-color: rgb(123, 28, 225);
+            margin-top: 20px;
+            position: fixed;
+            margin-left: 93px;
+            border-radius: 10px;
+            border-color: aquamarine;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    
+        <div class="text_header">
+            
+           <h2 id="text2"> Color Car </h2> 
+           <h2 id="text1">Detection</h2>
+        </div>
+        
+    
+
+    {% if massage %}
+    <body class="msg_body">
+        
+        <div class="msg">{{massage}}</div>
+    </body>
+        
+    {% endif %}
+    
+
+<!--     
+        <h1>Uploaded image</h1><hr>
+        <img src="{{url_for('display',filename=file_name)}}"><br>
+        
+        <form action="/predict"  method="post">
+
+            <input type="file" name="img" > -->
+            <!-- <button type="submit" class="sub2">Predict</button> -->
+            
+        <!-- </form> -->
+
+        {% if _img %}
+            <div class="display_text">
+            <h2 id="text3">your image</h2>
+            </div>
+
+            <img src="{{url_for('static',filename=_img)}}"  class="up_img" style="height: 500px;">
+            
+            <form action="/detect_car" method="post" filename="_img">
+                <button type="submit" class="sub3" ><i class="fa fa-crosshairs"></i>  detect car</button>
+            </form> 
+        {% endif %}       
+        <!-- {% if detected_img %}
+            <div class="display_text">
+            <h2 id="text3">detected car(s)</h2>
+            </div>
+
+            <img src="{{url_for('static',filename=detected_img)}}"  class="up_img" style="height: 500px;">
+            
+            <form action="/detect_car/recegnize_color" method="post" filename="_img">
+                <button type="submit" class="sub3" ><i class="fa fa-crosshairs"></i>  recegnize color</button>
+            </form>    
+        {% endif %}  -->
+
+        
+            <div class="wrapper">
+        
+            <form method="post", action='/' , enctype="multipart/form-data">
+        {% if not _img %} 
+            <div class="upload_file">
+                <input type="file" name="img_file"  required><i class="fa fa-arrow-up" ></i>
+            </div>
+        {% endif %}
+        
+        <div class="display_image">
+            {% if not _img %}    
+                <img src="/static/images/no_image.png" class="img" >
+                
+            {% endif %} 
+
+            {% if not _img %}  
+                
+                    <button type="submit" class="sub" style="align-items:flex-start">upload and display</button>
+                 
+            {% endif %} 
+
+        </div>
+            
+        
+        </form>
+
+        </div>
+     
+   
+    
+</body>
+</html>
