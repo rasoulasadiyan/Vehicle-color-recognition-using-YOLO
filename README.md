@@ -12,21 +12,20 @@ change directory to repository direct
 ```bash
 cd color_recognition
 ```
-build dockerfile (. is current directory Dockerfile )
+build Dockerfile in current directory **.**
 
 ```bash
 docker build -t image_name .
 ```
-convert image to container run this command :
+convert image to container run this command 
 
 ```bash
 docker run --name container_name -p 5000:5000 image_name
 ```
 
-you can remove this image after stopping add --rm to command
-
+to removing this image after stop running add --rm to command
 
 ```bash
 docker run --rm --name container_name -p 5000:5000 image_name
 ```
-◘**if not work download yolov4.weights from [HERE](https://github.com/rasoulasadiyan/color-recognition/raw/master/dnn_model/yolov4.weights) and paste to dnn_model instead previous file** 
+**if not work download yolov4.weights from [![HERE](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/rasoulasadiyan/color-recognition/raw/master/dnn_model/yolov4.weights) and paste to dnn_model instead previous file** 
