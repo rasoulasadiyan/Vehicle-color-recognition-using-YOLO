@@ -6,7 +6,7 @@ vehicle color recognition with yolo trained_model for detect cars in image and K
 
 #### 1. 
 ```bash
-git clone https://github.com/rasoulasadiyan/color-recognition.git 
+git lfs clone https://github.com/rasoulasadiyan/color-recognition.git 
 ```
 #### 2. change directory to repository direct
 
