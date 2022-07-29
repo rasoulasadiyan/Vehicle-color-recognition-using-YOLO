@@ -29,6 +29,6 @@ docker run --name container_name -p 5000:5000 image_name
 ```bash
 docker run --rm --name container_name -p 5000:5000 image_name
 ```
-**if not work [download zip this repository](https://github.com/rasoulasadiyan/color-recognition/archive/refs/heads/master.zip) and download yolov4.weights from [HERE](https://github.com/rasoulasadiyan/color-recognition/raw/master/dnn_model/yolov4.weights) then replace with previous file in dnn_model directoty** 
 
-.If everything goes well, the app is running on localhost port 5000
+
+### If everything goes well, the app is running on localhost port 5000
