@@ -1,6 +1,6 @@
 # color recognition
 
-vehicle color recognition with yolo trained_model for detect cars in image and K-nearest neighbors algorithm for training colors 
+vehicle color recognition with yolo trained_model for detect cars in image and K-nearest neighbors algorithm which is trained by R, G, B Color Histogram. It can classify White, Black, Red, Green, Blue, Orange, Yellow, Gray, Brown and Violet
 
 ### Build Dockerfile
 
@@ -19,12 +19,6 @@ cd color_recognition
 docker build -t image_name .
 ```
 #### 4. convert image to container run this command 
-
-```bash
-docker run --name container_name -p 5000:5000 image_name
-```
-
-#### 5. to removing this image after stop running add --rm to command
 
 ```bash
 docker run --rm --name container_name -p 5000:5000 image_name
