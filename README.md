@@ -1,4 +1,4 @@
-### [report.pdf](https://github.com/rasoulasadiyan/color-recognition/blob/master/static/result/report.pdf)
+##                                         [report.pdf](https://github.com/rasoulasadiyan/color-recognition/blob/master/static/result/report.pdf)
 # color recognition
 
 vehicle color recognition with yolo trained_model for detect cars in image and K-nearest neighbors algorithm which is trained by R, G, B Color Histogram. It can classify White, Black, Red, Green, Blue, Orange, Yellow, Gray, Brown and Violet
